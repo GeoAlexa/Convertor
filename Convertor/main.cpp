@@ -10,6 +10,8 @@ int main()
     cout<<"1. Lungime"<<"\n";
     cout<<"2. Arie"<<"\n";
     cout<<"3. Temperatura"<<"\n";
+    cout<<"4. Putere"<<"\n";
+
     cin>>unitate_de_masura;
     cout<<"\n";
 
@@ -318,6 +320,138 @@ int main()
             cout<<"Alegere invalida";
     }
 
+    else if(unitate_de_masura==3)
+    {
+        long double celsius=0, kelvin=0, fahrenheit=0, rankine=0;
+
+        cout<<"1. Celsius"<<"\n";
+        cout<<"2. Kelvin"<<"\n";
+        cout<<"3. Fahrenheit"<<"\n";
+        cout<<"4. Rankine"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Celsius: ";
+            cin>>celsius;
+            cout<<"\n";
+
+            fahrenheit=(celsius*1.8)+32;
+            kelvin=celsius+273.15;
+            rankine=(celsius+273.15)*9/5;
+
+            cout<<"Fahrenheit: "<<fahrenheit<<"\n";
+            cout<<"Kelvin: "<<kelvin<<"\n";
+            cout<<"Rankine:"<<rankine<<"\n";
+        }
+        else if(alege_marimea==2)
+        {
+            cout<<"Kelvin: ";
+            cin>>kelvin;
+            cout<<"\n";
+
+            celsius=kelvin-273.15;
+            fahrenheit=(celsius*1.8)+32;
+            rankine=(celsius+273.15)*9/5;
+
+            cout<<"Fahrenheit: "<<fahrenheit<<"\n";
+            cout<<"Celsius: "<<celsius<<"\n";
+            cout<<"Rankine:"<<rankine<<"\n";
+        }
+
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Fahrenheit: ";
+            cin>>fahrenheit;
+            cout<<"\n";
+
+            celsius=(fahrenheit-32)/1.8;
+            kelvin=celsius+273.15;
+            rankine=(celsius+273.15)*9/5;
+
+            cout<<"Celsius: "<<celsius<<"\n";
+            cout<<"Kelvin: "<<kelvin<<"\n";
+            cout<<"Rankine:"<<rankine<<"\n";
+        }
+
+
+        else if(alege_marimea==4)
+        {
+            cout<<"Rankine: ";
+            cin>>rankine;
+            cout<<"\n";
+
+            celsius=(rankine-491.67)*5/9;
+            kelvin=celsius+273.15;
+            fahrenheit=(celsius*1.8)+32;
+
+            cout<<"Celsius: "<<celsius<<"\n";
+            cout<<"Kelvin: "<<kelvin<<"\n";
+            cout<<"Fahrenheit:"<<fahrenheit<<"\n";
+        }
+        else
+            cout<<"Valoare invalida";
+    }
+
+    else if(unitate_de_masura==4)
+    {
+        long double cal_putere=0, watt=0, kilowatt=0;
+
+        cout<<"1. Watt"<<"\n";
+        cout<<"2. Kilowatt"<<"\n";
+        cout<<"3. Cal putere"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Watt: ";
+            cin>>watt;
+            cout<<"\n";
+
+            kilowatt=watt*0.001;
+            cal_putere=watt*0.00135962161;
+
+            cout<<"Kilowatt: "<<kilowatt<<"\n";
+            cout<<"Cai putere: "<<cal_putere<<"\n";
+
+
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Kilowatt: ";
+            cin>>kilowatt;
+            cout<<"\n";
+
+            watt=kilowatt/0.001;
+            cal_putere=watt*0.00135962161;
+
+            cout<<"Watt: "<<watt<<"\n";
+            cout<<"Cai putere: "<<cal_putere<<"\n";
+
+        }
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Cai putere: ";
+            cin>>cal_putere;
+            cout<<"\n";
+
+            watt=cal_putere/0.00135962161;
+            kilowatt=watt*0.001;
+
+            cout<<"Watt: "<<watt<<"\n";
+            cout<<"Kilowatt: "<<kilowatt<<"\n";
+
+        }
+
+
+    }
 
 
     return 0;
