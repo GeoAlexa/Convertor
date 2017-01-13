@@ -13,7 +13,10 @@ int main()
     cout<<"4. Putere"<<"\n";
     cout<<"5. Energie"<<"\n";
     cout<<"6. Presiune"<<"\n";
-
+    cout<<"7. Viteza"<<"\n";
+    cout<<"8. Densitate"<<"\n";
+    cout<<"9. Debit"<<"\n";
+    cout<<"10. Timp"<<"\n";
 
     cin>>unitate_de_masura;
     cout<<"\n";
@@ -559,7 +562,7 @@ int main()
 
     }
 
-    if(unitate_de_masura==6)
+    else if(unitate_de_masura==6)
     {
         long double kilopascal=0, bar=0, milibar=0, pascal=0, torr=0;
 
@@ -658,7 +661,244 @@ int main()
             cout<<"Milibar: "<<milibar<<"\n";
             cout<<"Bar: "<<bar<<"\n";
         }
-        return 0;
+        else
+            cout<<"Valoare invalida";
+    }
+
+    else if(unitate_de_masura==7)
+    {
+        long double metrups=0, metrupmin=0, metruph=0, mph=0, kmh=0;
+
+        cout<<"1. Metru/Secunda"<<"\n";
+        cout<<"2. Metru/Minut"<<"\n";
+        cout<<"3. Metru/Ora"<<"\n";
+        cout<<"4. MPH"<<"\n";
+        cout<<"5. KMH"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Metru/Secunda: ";
+            cin>>metrups;
+            cout<<"\n";
+
+            metrupmin=metrups*60;
+            metruph=metrups*3600;
+            mph=metrups*2.2369362920;
+            kmh=metrups*3.6;
+
+
+            cout<<"Metru/Minut: "<<metrupmin<<"\n";
+            cout<<"Metru/Ora: "<<metruph<<"\n";
+            cout<<"MPH: "<<mph<<"\n";
+            cout<<"KMH: "<<kmh<<"\n";
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Metru/Minut: ";
+            cin>>metrupmin;
+            cout<<"\n";
+
+            metrups=metrupmin/60;
+            metruph=metrups*3600;
+            mph=metrups*2.2369362920;
+            kmh=metrups*3.6;
+
+            cout<<"Metru/Secunda: "<<metrups<<"\n";
+            cout<<"Metru/Ora: "<<metruph<<"\n";
+            cout<<"MPH: "<<mph<<"\n";
+            cout<<"KMH: "<<kmh<<"\n";
+        }
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Metru/Ora: ";
+            cin>>metruph;
+            cout<<"\n";
+
+            metrups=metruph/3600;
+            metrupmin=metrups*60;
+            mph=metrups*2.2369362920;
+            kmh=metrups*3.6;
+
+            cout<<"Metru/Secunda: "<<metrups<<"\n";
+            cout<<"Metru/Minut: "<<metrupmin<<"\n";
+            cout<<"MPH: "<<mph<<"\n";
+            cout<<"KMH: "<<kmh<<"\n";
+        }
+
+        else if(alege_marimea==4)
+        {
+            cout<<"MPH: ";
+            cin>>mph;
+            cout<<"\n";
+
+            metrups=mph/2.2369362920;
+            metruph=metrups*3600;
+            metrupmin=metrups*60;
+            kmh=metrups*3.6;
+
+            cout<<"Metru/Secunda: "<<metrups<<"\n";
+            cout<<"Metru/Minut: "<<metrupmin<<"\n";
+            cout<<"Metru/Ora: "<<metruph<<"\n";
+            cout<<"KMH: "<<kmh<<"\n";
+        }
+
+        else if(alege_marimea==5)
+        {
+            cout<<"KMH: ";
+            cin>>kmh;
+            cout<<"\n";
+
+
+            metrups=kmh/3.6;
+            mph=metrups*2.2369362920;
+            metruph=metrups*3600;
+            metrupmin=metrups*60;
+
+            cout<<"Metru/Secunda: "<<metrups<<"\n";
+            cout<<"Metru/Minut: "<<metrupmin<<"\n";
+            cout<<"Metru/Ora: "<<metruph<<"\n";
+            cout<<"MPH: "<<mph<<"\n";
+        }
+        else
+            cout<<"Valoare invalida";
 
     }
+
+    else if(unitate_de_masura==8)
+    {
+        long double kgmcub=0, galonUK=0, galonUS=0;
+
+        cout<<"1. Kg/Metru cub"<<"\n";
+        cout<<"2. Galon US"<<"\n";
+        cout<<"3. Galon UK"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Kg/Metru cub: ";
+            cin>>kgmcub;
+            cout<<"\n";
+
+            galonUK=kgmcub*0.0100224128552;
+            galonUS=kgmcub*0.0083454044531;
+
+            cout<<"Galon US: "<<galonUS<<"\n";
+            cout<<"Galon UK: "<<galonUK<<"\n";
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Galon US: ";
+            cin>>galonUS;
+            cout<<"\n";
+
+            kgmcub=galonUS/0.0083454044531;
+            galonUK=kgmcub*0.0100224128552;
+
+            cout<<"Kg/Metru cub: "<<kgmcub<<"\n";
+            cout<<"Galon UK: "<<galonUK<<"\n";
+        }
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Galon UK: ";
+            cin>>galonUK;
+            cout<<"\n";
+
+            kgmcub=galonUK/0.0100224128552;
+            galonUS=kgmcub*0.0083454044531;
+
+
+            cout<<"Kg/Metru cub: "<<kgmcub<<"\n";
+            cout<<"Galon UK: "<<galonUK<<"\n";
+        }
+        else
+            cout<<"Valoare invalida";
+
+    }
+
+    else if(unitate_de_masura==9)
+    {
+        long double mcubs=0, galonUSmin=0;
+
+        cout<<"1. Metru cub/Secunda"<<"\n";
+        cout<<"2. Galon US/Minut"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Metru cub/Secunda: ";
+            cin>>mcubs;
+            cout<<"\n";
+
+            galonUSmin=mcubs*15852.047;
+
+            cout<<"Galon US/Minut: "<<galonUSmin<<"\n";
+
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Galon US/Minut: ";
+            cin>>galonUSmin;
+            cout<<"\n";
+
+            mcubs=galonUSmin/15852.047;
+
+            cout<<"Metru cub/Secunda: "<<mcubs<<"\n";
+
+        }
+        else
+            cout<<"Comanda invalida";
+    }
+
+    else if(unitate_de_masura==10)
+    {
+        long double s=0, d=0;
+
+        cout<<"1. Secunda"<<"\n";
+        cout<<"2. Decisecunda"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Secunda: ";
+            cin>>s;
+            cout<<"\n";
+
+            d=s*10;
+
+            cout<<"Decisecunda: "<<d<<"\n";
+
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Decisecunda: ";
+            cin>>d;
+            cout<<"\n";
+
+            s=d/10;
+
+            cout<<"Secunda: "<<s<<"\n";
+
+        }
+        else
+            cout<<"Comanda invalida";
+    }
+    else
+        cout<<"Comanda invalida";
+
+    return 0;
 }
