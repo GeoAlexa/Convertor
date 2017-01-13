@@ -11,6 +11,9 @@ int main()
     cout<<"2. Arie"<<"\n";
     cout<<"3. Temperatura"<<"\n";
     cout<<"4. Putere"<<"\n";
+    cout<<"5. Energie"<<"\n";
+    cout<<"6. Presiune"<<"\n";
+
 
     cin>>unitate_de_masura;
     cout<<"\n";
@@ -193,7 +196,7 @@ int main()
             cout<<"Yarzi: "<<yarzi<<"\n";
         }
 
-         else if(alege_marimea==8)
+        else if(alege_marimea==8)
         {
             cout<<"Yarzi: ";
             cin>>yarzi;
@@ -436,6 +439,7 @@ int main()
 
         }
 
+
         else if(alege_marimea==3)
         {
             cout<<"Cai putere: ";
@@ -449,10 +453,212 @@ int main()
             cout<<"Kilowatt: "<<kilowatt<<"\n";
 
         }
+    }
+    else if(unitate_de_masura==5)
+    {
+        long double jouli=0, calorii=0, kilojouli=0, livre=0, kilocalorii=0;
+
+        cout<<"1. Jouli"<<"\n";
+        cout<<"2. Kilojouli"<<"\n";
+        cout<<"3. Calorii"<<"\n";
+        cout<<"4. Kilocalorii"<<"\n";
+        cout<<"5. Livre forta"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Jouli: ";
+            cin>>jouli;
+            cout<<"\n";
+
+            kilojouli=jouli*0.001;
+            calorii=jouli*0.2388;
+            kilocalorii=jouli*0.0002388;
+            livre=jouli*8.850745791;
+
+            cout<<"Kilojouli: "<<kilojouli<<"\n";
+            cout<<"Calorii: "<<calorii<<"\n";
+            cout<<"Kilocalori: "<<kilocalorii<<"\n";
+            cout<<"Livre forta: "<<livre<<"\n";
+
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Kilojouli: ";
+            cin>>kilojouli;
+            cout<<"\n";
+
+            jouli=kilojouli/0.001;
+            calorii=jouli*0.2388;
+            kilocalorii=jouli*0.0002388;
+            livre=jouli*8.850745791;
+
+            cout<<"Jouli: "<<jouli<<"\n";
+            cout<<"Calorii: "<<calorii<<"\n";
+            cout<<"Kilocalori: "<<kilocalorii<<"\n";
+            cout<<"Livre forta: "<<livre<<"\n";
+
+        }
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Calorii: ";
+            cin>>calorii;
+            cout<<"\n";
+
+            jouli=calorii/0.2388;
+            kilojouli=jouli*0.001;
+            kilocalorii=jouli*0.0002388;
+            livre=jouli*8.850745791;
+
+            cout<<"Jouli: "<<jouli<<"\n";
+            cout<<"Kilojouli: "<<kilojouli<<"\n";
+            cout<<"Kilocalori: "<<kilocalorii<<"\n";
+            cout<<"Livre forta: "<<livre<<"\n";
+        }
+
+        else if(alege_marimea==4)
+        {
+            cout<<"Kilocalorii: ";
+            cin>>kilocalorii;
+            cout<<"\n";
+
+
+            jouli=kilocalorii/0.0002388;
+            livre=jouli/8.850745791;
+            calorii=jouli*0.2388;
+            kilojouli=jouli*0.001;
+
+            cout<<"Jouli: "<<jouli<<"\n";
+            cout<<"Kilojouli: "<<kilojouli<<"\n";
+            cout<<"calori: "<<calorii<<"\n";
+            cout<<"Livre: "<<livre<<"\n";
+        }
+
+
+        else if(alege_marimea==5)
+        {
+            cout<<"Livre forta: ";
+            cin>>livre;
+            cout<<"\n";
+
+            jouli=livre/8.850745791;
+            calorii=jouli*0.2388;
+            kilojouli=jouli*0.001;
+            kilocalorii=jouli*0.0002388;
+
+            cout<<"Jouli: "<<jouli<<"\n";
+            cout<<"Kilojouli: "<<kilojouli<<"\n";
+            cout<<"calori: "<<calorii<<"\n";
+            cout<<"Kilocalori: "<<kilocalorii<<"\n";
+        }
 
 
     }
 
+    if(unitate_de_masura==6)
+    {
+        long double kilopascal=0, bar=0, milibar=0, pascal=0, torr=0;
 
-    return 0;
+        cout<<"1. Pascal"<<"\n";
+        cout<<"2. Kilopascal"<<"\n";
+        cout<<"3. Milibar"<<"\n";
+        cout<<"4. Bar"<<"\n";
+        cout<<"5. Torr"<<"\n";
+
+        cin>>alege_marimea;
+        cout<<"\n";
+
+        if(alege_marimea==1)
+        {
+            cout<<"Pascal: ";
+            cin>>pascal;
+            cout<<"\n";
+
+            kilopascal=pascal*0.001;
+            bar=pascal*0.00001;
+            milibar=pascal*0.01;
+            torr=pascal*0.007500617;
+
+
+            cout<<"Kilopascal: "<<kilopascal<<"\n";
+            cout<<"Milibar: "<<milibar<<"\n";
+            cout<<"Bar: "<<bar<<"\n";
+            cout<<"Torr: "<<torr<<"\n";
+        }
+
+        else if(alege_marimea==2)
+        {
+            cout<<"Kilopascal: ";
+            cin>>kilopascal;
+            cout<<"\n";
+
+            pascal=kilopascal/0.001;
+            bar=pascal*0.00001;
+            milibar=pascal*0.01;
+            torr=pascal*0.007500617;
+
+
+            cout<<"Pascal: "<<pascal<<"\n";
+            cout<<"Milibar: "<<milibar<<"\n";
+            cout<<"Bar: "<<bar<<"\n";
+            cout<<"Torr: "<<torr<<"\n";
+        }
+
+        else if(alege_marimea==3)
+        {
+            cout<<"Milibar: ";
+            cin>>milibar;
+            cout<<"\n";
+
+            pascal=milibar/0.01;
+            kilopascal=pascal*0.001;
+            bar=pascal*0.00001;
+            torr=pascal*0.007500617;
+
+            cout<<"Pascal: "<<pascal<<"\n";
+            cout<<"Kilopascal: "<<kilopascal<<"\n";
+            cout<<"Bar: "<<bar<<"\n";
+            cout<<"Torr: "<<torr<<"\n";
+        }
+
+        else if(alege_marimea==4)
+        {
+            cout<<"Bar: ";
+            cin>>bar;
+            cout<<"\n";
+
+            pascal=bar/0.00001;
+            milibar=pascal*0.01;
+            kilopascal=pascal*0.001;
+            torr=pascal*0.007500617;
+
+            cout<<"Pascal: "<<pascal<<"\n";
+            cout<<"Kilopascal: "<<kilopascal<<"\n";
+            cout<<"Milibar: "<<milibar<<"\n";
+            cout<<"Torr: "<<torr<<"\n";
+        }
+
+        else if(alege_marimea==5)
+        {
+            cout<<"Torr: ";
+            cin>>torr;
+            cout<<"\n";
+
+            pascal=torr/0.007500617;
+            bar=pascal*0.00001;
+            milibar=pascal*0.01;
+            kilopascal=pascal*0.001;
+
+            cout<<"Pascal: "<<pascal<<"\n";
+            cout<<"Kilopascal: "<<kilopascal<<"\n";
+            cout<<"Milibar: "<<milibar<<"\n";
+            cout<<"Bar: "<<bar<<"\n";
+        }
+        return 0;
+
+    }
 }
