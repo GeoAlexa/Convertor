@@ -1,0 +1,1 @@
+Se alege tasta numerica corespunzatoare unitatii de masura dorite. 
